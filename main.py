@@ -1,3 +1,8 @@
+'''
+author : Mayank Malhotra
+created : 10/10/15
+'''
+
 import compute
 
 
@@ -16,13 +21,13 @@ def process_info(text, key, method):
     if method is 'e':
         conversion = ''
         for i in range(0, len(text), 64):
-            conversion += compute.encrypt(text[i:i+64], encryption_keys)
+            conversion += compute.encrypt(text[i:i + 64], encryption_keys)
         return '\nCipher: ' + conversion
     else:
         conversion = ''
         for i in range(0, len(text), 64):
-            conversion += compute.encrypt(text[i:i+64], decryption_keys)
-        return '\nMessage: ' + ''.join(chr(int(conversion[i:i+8], 2))
+            conversion += compute.encrypt(text[i:i + 64], decryption_keys)
+        return '\nMessage: ' + ''.join(chr(int(conversion[i:i + 8], 2))
                                        for i in range(0, len(conversion), 8))
 
 text = raw_input("\nEnter the text: ")

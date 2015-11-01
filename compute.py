@@ -1,3 +1,8 @@
+'''
+author : Mayank Malhotra
+created : 10/10/15
+'''
+
 from lookup_tables import *
 
 
@@ -29,7 +34,6 @@ def foo(r, key):
 
 
 def encrypt(text, keys):
-    # assumes that text is 64 bit
     text = ''.join(text[ip64[i] - 1] for i in range(64))
     left, right = text[:32], text[32:]
     for i in range(16):

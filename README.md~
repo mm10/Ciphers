@@ -1,0 +1,10 @@
+## Data Encryption Standard
+# Python 2.7
+
+To start the program, run the file *main.py*
+
+The program performs encryption as well as decryption
+
+To perform decryption, input the encrypted text in *binary format* as the message
+
+Detailed documenation coming soon
